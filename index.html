@@ -2,555 +2,754 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Hamza Jameel · React Native Engineer</title>
-<meta name="description" content="Hamza Jameel, React Native engineer (3.5+ years). iOS and Android apps with native Kotlin and Swift. Lahore / Remote.">
-<meta property="og:title" content="Hamza Jameel · React Native Engineer">
-<meta property="og:description" content="iOS & Android apps, end to end. Crash detection, EdTech, payments, open-source native modules.">
+<meta name="description" content="Hamza Jameel builds iOS and Android apps with React Native, Kotlin and Swift. Apps live on the App Store and Google Play.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5f3ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0c0f" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://hamzajameel01.github.io/">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231f4fd8'/><text x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='white' text-anchor='middle'>HJ</text></svg>">
+<meta property="og:url" content="https://hamzajameel01.github.io/">
+<meta property="og:site_name" content="Hamza Jameel">
+<meta property="og:title" content="Hamza Jameel · React Native Engineer">
+<meta property="og:description" content="I build iOS and Android apps and get them into the stores. Subscriptions, native Kotlin and Swift, performance and crash fixes.">
+<meta property="og:image" content="https://hamzajameel01.github.io/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hamza Jameel, React Native engineer, with screenshots of apps he built">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hamza Jameel · React Native Engineer">
+<meta name="twitter:description" content="I build iOS and Android apps and get them into the stores.">
+<meta name="twitter:image" content="https://hamzajameel01.github.io/assets/og.jpg">
+<script>
+  // Apply saved theme before paint to avoid a flash.
+  try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-html { scroll-behavior: smooth; }
-body { margin: 0; padding: 0; }
-img { max-width: 100%; }
-/* Layout: one 1080px column. Hero pairs the name with a live 50Hz sensor trace; work as a two-column case grid; experience as a dated ledger. */
+/* Midnight v3: one surface, one accent, real store screenshots, light + dark. */
 :root {
-  --bg: #eef1f4;
-  --surface: #ffffff;
-  --ink: #131a24;
-  --muted: #586373;
-  --line: #d5dbe3;
-  --accent: #1f4fd8;
-  --signal: #e2611b;
-  --chip: #e3e8ef;
-  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
-  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --bg: #f5f3ee;
+  --surface: #fffefb;
+  --raised: #efece4;
+  --line: #e4dfd4;
+  --line-strong: #d2cbbc;
+  --ink: #1d1c19;
+  --muted: #57534b;
+  --faint: #8e887b;
+  --dim: #5f5a50;
+  --gh: #181717;
+  --accent: #2f7a5b;
+  --ok: #2f9e6a;
+  --btn: #2f7a5b;
+  --btn-ink: #ffffff;
+  --grid: rgba(60,50,30,.06);
+  --code-bg: #f0ede6;
+  --shadow: 0 1px 2px rgba(60,50,30,.05), 0 16px 36px -20px rgba(60,50,30,.18);
+  --shot-shadow: 0 28px 56px -26px rgba(60,50,30,.45);
+  --font: "Inter", system-ui, -apple-system, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0f141b; --surface: #171e28; --ink: #e8edf3; --muted: #95a1b2;
-    --line: #283242; --accent: #7a9cff; --signal: #ff8a4c; --chip: #212b38;
+    --bg: #0b0c0f; --surface: #121318; --raised: #17181e; --line: #22242c; --line-strong: #33353f;
+    --ink: #ededf0; --muted: #a1a3ad; --faint: #6b6e79; --accent: #8ab4ff; --ok: #4ade80; --code-bg: #0b0c0f; --dim: #a3a6b0; --gh: #f0f0f2; --btn: #ededf0; --btn-ink: #0b0c0f; --grid: rgba(255,255,255,.035);
+    --shadow: none; --shot-shadow: 0 30px 60px -24px rgba(0,0,0,.9);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0f141b; --surface: #171e28; --ink: #e8edf3; --muted: #95a1b2;
-  --line: #283242; --accent: #7a9cff; --signal: #ff8a4c; --chip: #212b38;
+  --bg: #0b0c0f; --surface: #121318; --raised: #17181e; --line: #22242c; --line-strong: #33353f;
+  --ink: #ededf0; --muted: #a1a3ad; --faint: #6b6e79; --accent: #8ab4ff; --ok: #4ade80; --code-bg: #0b0c0f; --dim: #a3a6b0; --gh: #f0f0f2; --btn: #ededf0; --btn-ink: #0b0c0f; --grid: rgba(255,255,255,.035);
+  --shadow: none; --shot-shadow: 0 30px 60px -24px rgba(0,0,0,.9);
   color-scheme: dark;
 }
-
 * { box-sizing: border-box; }
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--body);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-.wrap {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; text-underline-offset: 3px; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 var(--font); -webkit-font-smoothing: antialiased; transition: background .25s, color .25s; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -0.025em; }
 p { margin: 0; }
+img { display: block; max-width: 100%; height: auto; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.kicker { font-size: 13px; font-weight: 500; color: var(--faint); }
 
-.label {
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
+/* nav */
+nav.top { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color .2s; }
+nav.top.scrolled { border-bottom-color: var(--line); }
+nav.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+.name { font-weight: 600; font-size: 15px; }
+.links { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
+.links a:hover { color: var(--ink); }
+.nav-r { display: flex; gap: 8px; align-items: center; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; padding: 0 18px; border-radius: 10px; font: 500 14px var(--font); border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; transition: background .15s, border-color .15s; }
+.btn:hover { border-color: var(--line-strong); background: var(--raised); }
+.btn.primary { background: var(--btn); color: var(--btn-ink); border-color: var(--btn); }
+.btn.primary:hover { opacity: .9; background: var(--btn); }
+.hero .cta .btn svg, .btn.primary svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: translate .15s; }
+.btn.primary:hover svg { translate: 3px 0; }
+.icon-btn { width: 40px; padding: 0; }
+.icon-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.icon-btn .moon { display: none; }
+#menu, .mnav, .icon-btn .m-close { display: none; }
+nav.top.open .icon-btn .m-open { display: none; }
+nav.top.open .icon-btn .m-close { display: block; }
+:root[data-theme="dark"] .icon-btn .sun { display: none; }
+:root[data-theme="dark"] .icon-btn .moon { display: block; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .icon-btn .sun { display: none; } :root:not([data-theme="light"]) .icon-btn .moon { display: block; } }
 
-/* Top bar */
-.top { padding-block: 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-.top nav { display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; }
-.top nav a { color: var(--muted); }
-.top nav a:hover { color: var(--ink); }
-.status { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
-.status i { width: 8px; height: 8px; border-radius: 50%; background: #2fa866; box-shadow: 0 0 0 3px color-mix(in srgb, #2fa866 25%, transparent); }
+/* hero */
+.hero { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; padding: 96px 0 88px; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.status i { width: 7px; height: 7px; border-radius: 50%; background: var(--ok); }
+.hero h1 { margin-top: 20px; font-size: clamp(40px, 5.2vw, 60px); line-height: 1.08; letter-spacing: -0.035em; }
+.hero::before { content: ""; position: absolute; inset: 0 calc(50% - 50vw); z-index: -1; pointer-events: none; background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 48px 48px; -webkit-mask-image: radial-gradient(ellipse 60% 70% at 30% 40%, #000 30%, transparent 75%); mask-image: radial-gradient(ellipse 60% 70% at 30% 40%, #000 30%, transparent 75%); }
+.hero h1 span { color: var(--dim); }
+.hero .lede { margin-top: 20px; font-size: 18px; color: var(--muted); max-width: 30em; }
+.hero .cta { margin-top: 32px; display: flex; gap: 10px; flex-wrap: wrap; }
+.hero .cta .btn { height: 48px; padding: 0 22px; border-radius: 999px; font-size: 15px; }
+.social { margin-top: 28px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.social a { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px 0 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 14px; font-weight: 500; color: var(--ink); transition: border-color .15s, translate .15s; }
+.social a:hover { border-color: var(--line-strong); translate: 0 -2px; }
+.social svg { width: 20px; height: 20px; flex: none; }
+.social .gh { color: var(--gh); }
+.social .sep { width: 1px; height: 22px; background: var(--line-strong); margin: 0 8px; }
+.social small { flex-basis: 100%; margin-top: 8px; font: 13px var(--mono); color: var(--faint); }
+.shots-hero { position: relative; height: 520px; }
+.shots-hero img { position: absolute; width: 210px; border-radius: 22px; border: 1px solid var(--line); box-shadow: var(--shot-shadow); }
+.shots-hero img:nth-child(1) { left: 0; top: 70px; }
+.shots-hero img:nth-child(2) { left: 50%; top: 0; translate: -50% 0; z-index: 2; }
+.shots-hero img:nth-child(3) { right: 0; top: 70px; }
 
-/* Hero */
-.hero { padding-block: 40px 56px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; }
-.hero > * { min-width: 0; }
-.hero h1 { font-size: clamp(48px, 8vw, 92px); font-weight: 800; line-height: 0.95; letter-spacing: -0.03em; }
-.role { margin-top: 18px; font-family: var(--display); font-size: clamp(20px, 2.4vw, 26px); font-weight: 500; }
-.role span { color: var(--muted); }
-.lede { margin-top: 18px; max-width: 34em; color: var(--muted); font-size: 17px; }
-.contact { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 10px 16px; border-radius: 8px;
-  font: 500 14px var(--body); cursor: pointer;
-  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
-}
-.btn:hover { text-decoration: none; border-color: var(--muted); }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-.email { font-family: var(--mono); font-size: 13px; user-select: all; }
+/* facts */
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.facts div { padding: 28px 0; }
+.facts div + div { padding-left: 28px; border-left: 1px solid var(--line); }
+.facts strong { display: block; font-size: 32px; font-weight: 600; letter-spacing: -0.03em; }
+.facts span { font-size: 14px; color: var(--muted); }
 
-/* Sensor card */
-.sensor { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 14px; }
-.sensor-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-.legend { display: flex; gap: 12px; font-family: var(--mono); font-size: 11px; color: var(--muted); }
-.legend b { display: inline-block; width: 10px; height: 2px; vertical-align: middle; margin-right: 4px; }
-canvas { display: block; width: 100%; height: 190px; margin-top: 10px; }
-.sensor-foot { margin-top: 10px; font-family: var(--mono); font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-.sensor-foot .alert { color: var(--signal); }
+/* section heads */
+section.s { padding-top: 120px; }
+.head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+.head h2 { font-size: clamp(30px, 3.6vw, 40px); line-height: 1.15; }
+.head p { color: var(--muted); max-width: 26em; }
 
-/* Numbers */
-.numbers { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.numbers div { padding: 22px 20px 22px 0; }
-.numbers div + div { padding-left: 20px; border-left: 1px solid var(--line); }
-.numbers strong { display: block; font-family: var(--display); font-size: clamp(30px, 4vw, 42px); font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
-.numbers span { font-size: 14px; color: var(--muted); }
+/* app showcase */
+.app { display: grid; grid-template-columns: 340px 1fr; gap: 48px; padding: 40px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); box-shadow: var(--shadow); }
+.app + .app { margin-top: 20px; }
+.app-id { display: flex; align-items: center; gap: 14px; }
+.app-id img { width: 56px; height: 56px; border-radius: 13px; border: 1px solid var(--line); }
+.app-id h3 { font-size: 24px; }
+.app-id .kicker { margin-top: 2px; }
+.app .desc { margin-top: 22px; color: var(--muted); }
+.app ul { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; font-size: 15px; }
+.app li { padding-left: 18px; position: relative; }
+.app li::before { content: ""; position: absolute; left: 0; top: .65em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.stack { margin-top: 20px; font-size: 13px; color: var(--faint); }
+.stores { margin-top: 24px; display: flex; gap: 8px; flex-wrap: wrap; }
+.store { display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px; border-radius: 10px; font-size: 13px; font-weight: 500; background: var(--raised); border: 1px solid var(--line); transition: border-color .15s; }
+a.store:hover { border-color: var(--line-strong); }
+.store svg { width: 16px; height: 16px; fill: currentColor; }
+.store.muted { color: var(--faint); }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-content: center; }
+.gallery img { width: 100%; aspect-ratio: 600 / 1299; object-fit: cover; border-radius: 18px; border: 1px solid var(--line); background: var(--raised); }
 
-/* Sections */
-section.block { padding-block: 72px 0; }
-.sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
-.sec-head h2 { font-size: clamp(30px, 4vw, 40px); font-weight: 700; letter-spacing: -0.02em; }
-
-/* Work grid */
-.work { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.case { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
-.case.feature { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-.case.feature > div { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
-.case-top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-.case h3 { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; }
-.case .what { color: var(--muted); font-size: 15px; }
-.case ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; }
-.case ul li::marker { color: var(--accent); }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
-.chip { font-family: var(--mono); font-size: 11.5px; padding: 3px 8px; border-radius: 4px; background: var(--chip); color: var(--muted); }
-.links { display: flex; gap: 14px; flex-wrap: wrap; font-size: 14px; font-weight: 500; }
-.result { font-family: var(--display); font-size: 20px; font-weight: 600; line-height: 1.3; }
-.result em { font-style: normal; color: var(--signal); }
-.flow { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0; font-size: 14.5px; }
-.flow li { display: grid; grid-template-columns: 76px 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); }
+/* more work */
+.more { margin-top: 20px; display: grid; grid-template-columns: 1fr; gap: 20px; }
+.card { padding: 32px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.card h3 { margin-top: 10px; font-size: 22px; }
+.card p { margin-top: 10px; color: var(--muted); font-size: 15px; }
+.card .stack { margin-top: auto; padding-top: 20px; }
+.card.wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.flow { margin: 0; padding: 0; list-style: none; counter-reset: f; }
+.flow li { counter-increment: f; display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 12px 0; border-top: 1px solid var(--line); font-size: 15px; color: var(--muted); }
 .flow li:last-child { border-bottom: 1px solid var(--line); }
-.flow .t { font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 2px; font-variant-numeric: tabular-nums; }
+.flow li::before { content: counter(f); color: var(--accent); font-weight: 600; font-size: 13px; padding-top: 2px; }
+.flow b { color: var(--ink); font-weight: 500; }
 
-/* Open source */
-.oss { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 28px; }
-.oss > * { min-width: 0; }
-.oss h3 { font-family: var(--mono); font-size: 20px; font-weight: 500; overflow-wrap: anywhere; }
-.oss p { margin-top: 12px; color: var(--muted); }
-.code { font-family: var(--mono); font-size: 13px; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; overflow-x: auto; white-space: pre; line-height: 1.7; }
-.code .k { color: var(--accent); }
-.code .s { color: var(--signal); }
-.code .c { color: var(--muted); }
+/* open source */
+.oss { border: 1px solid var(--line); border-radius: 20px; background: var(--surface); box-shadow: var(--shadow); overflow: hidden; }
+.repo-bar { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding: 20px 40px; border-bottom: 1px solid var(--line); background: var(--raised); }
+.repo { display: inline-flex; align-items: center; gap: 10px; font: 15px var(--mono); min-width: 0; flex-wrap: wrap; }
+.repo svg { width: 20px; height: 20px; fill: currentColor; flex: none; }
+.repo span { color: var(--muted); }
+.repo b { font-weight: 600; overflow-wrap: anywhere; }
+.repo:hover b { color: var(--accent); }
+.oss-story { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 36px 40px 0; }
+.oss-story p { color: var(--muted); }
+.oss-story p b { color: var(--ink); font-weight: 500; }
+.tag-l { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent) !important; margin-bottom: 10px; }
+.oss-code { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; padding: 36px 40px 40px; }
+.oss-code > * { min-width: 0; }
+.install { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 12px 12px 16px; border-radius: 12px; background: var(--code-bg); border: 1px solid var(--line); font: 14px var(--mono); }
+.install span { overflow-wrap: anywhere; }
+.install span::before { content: "$ "; color: var(--faint); }
+.install button { flex: none; height: 30px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); font: 500 12px var(--font); cursor: pointer; }
+.install button:hover { color: var(--ink); }
+.feat { margin: 24px 0 0; padding: 0; list-style: none; display: grid; gap: 14px; font-size: 15px; color: var(--muted); }
+.feat li { padding-left: 26px; position: relative; }
+.feat li::before { content: ""; position: absolute; left: 0; top: .3em; width: 16px; height: 16px; border-radius: 50%; background: color-mix(in srgb, var(--ok) 16%, transparent); }
+.feat li::after { content: ""; position: absolute; left: 5px; top: calc(.3em + 4px); width: 6px; height: 3.5px; border-left: 1.8px solid var(--ok); border-bottom: 1.8px solid var(--ok); transform: rotate(-45deg); }
+.feat b { color: var(--ink); font-weight: 500; }
+.tabs { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--code-bg); }
+.tab-bar { display: flex; gap: 2px; padding: 6px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+.tab-bar button { flex: none; height: 30px; padding: 0 12px; border: 0; border-radius: 8px; background: transparent; color: var(--muted); font: 500 13px var(--font); cursor: pointer; }
+.tab-bar button[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 0 0 1px var(--line); }
+pre.code { margin: 0; padding: 20px; font: 13px/1.75 var(--mono); overflow-x: auto; color: var(--ink); min-height: 230px; }
+pre.code .k { color: var(--accent); }
+pre.code .s { color: var(--ok); }
+pre.code .c { color: var(--faint); }
+table.cmp { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.cmp th, table.cmp td { text-align: left; padding: 14px 40px; border-top: 1px solid var(--line); }
+table.cmp th { font-weight: 500; color: var(--faint); font-size: 13px; background: var(--raised); }
+table.cmp td:first-child { color: var(--muted); }
+table.cmp td:not(:first-child), table.cmp th:not(:first-child) { padding-left: 0; }
+.yes { color: var(--ok); font-weight: 500; }
+.oss-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
+.oss-stats div { padding: 22px 40px; }
+.oss-stats div + div { border-left: 1px solid var(--line); }
+.oss-stats strong { display: block; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
+.oss-stats span { font-size: 13px; color: var(--muted); }
+.oss-stats strong span { font-size: inherit; color: inherit; }
 
-/* Experience ledger */
-.ledger { border-top: 1px solid var(--line); }
-.job { display: grid; grid-template-columns: 200px 1fr; gap: 28px; padding-block: 28px; border-bottom: 1px solid var(--line); }
-.job > * { min-width: 0; }
-.when { font-family: var(--mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
-.job h3 { font-size: 22px; font-weight: 700; }
-.job .co { color: var(--muted); margin-top: 2px; }
-.job ul { margin: 12px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; max-width: 46em; }
-.promo { display: inline-block; margin-top: 8px; font-family: var(--mono); font-size: 12px; color: var(--accent); }
+/* services */
+.services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.svc { --c: var(--accent); position: relative; display: flex; flex-direction: column; padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); transition: translate .2s, border-color .2s, box-shadow .2s; overflow: hidden; }
+.svc::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: var(--c); opacity: 0; transition: opacity .2s; }
+.svc:hover { translate: 0 -4px; border-color: color-mix(in srgb, var(--c) 40%, var(--line)); box-shadow: 0 20px 40px -24px color-mix(in srgb, var(--c) 55%, transparent); }
+.svc:hover::before { opacity: 1; }
+.svc .ico { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; color: var(--c); background: color-mix(in srgb, var(--c) 13%, transparent); }
+.svc .ico svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.svc h3 { margin-top: 20px; font-size: 20px; }
+.svc p { margin-top: 8px; color: var(--muted); font-size: 15px; }
+.svc .proof { margin-top: 18px; display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px; border-radius: 12px; background: color-mix(in srgb, var(--c) 8%, transparent); font-size: 13.5px; line-height: 1.45; color: var(--ink); }
+.svc .proof b { flex: none; font: 600 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--c); padding-top: 2px; }
+.svc .tags { margin-top: auto; padding-top: 18px; display: flex; flex-wrap: wrap; gap: 6px; }
+.svc .tags span { font: 12px var(--mono); color: var(--muted); padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); }
+.svc-cta { margin-top: 16px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 24px 28px; border-radius: 18px; background: var(--btn); color: var(--btn-ink); }
+.svc-cta strong { font-size: 18px; font-weight: 600; }
+.svc-cta p { margin-top: 2px; opacity: .75; font-size: 14px; }
+.svc-cta .btn { background: var(--btn-ink); color: var(--btn); border-color: transparent; height: 46px; padding: 0 22px; border-radius: 999px; font-size: 15px; }
+.svc-cta .btn:hover { background: var(--btn-ink); opacity: .9; }
 
-/* Skills */
-.skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 32px; }
-.skills h3 { font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-.skills p { font-size: 15px; }
-.ai { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 200px 1fr; gap: 28px; }
-.ai p { max-width: 46em; color: var(--muted); }
-.ai p + p { margin-top: 8px; }
+/* process */
+.process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.step { padding-top: 20px; border-top: 1px solid var(--line); }
+.step .n { font-size: 13px; font-weight: 600; color: var(--accent); }
+.step h3 { margin-top: 12px; font-size: 18px; }
+.step p { margin-top: 6px; color: var(--muted); font-size: 15px; }
 
-/* Education + footer */
-.edu { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.edu div { border-top: 2px solid var(--ink); padding-top: 14px; }
-.edu h3 { font-size: 19px; font-weight: 700; }
-.edu p { color: var(--muted); font-size: 15px; margin-top: 4px; }
-footer { margin-top: 88px; padding-block: 48px; border-top: 1px solid var(--line); }
-footer h2 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; letter-spacing: -0.02em; max-width: 14em; }
-footer .contact { margin-top: 22px; }
-footer small { display: block; margin-top: 36px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+/* experience */
+.job { display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding: 28px 0; border-top: 1px solid var(--line); }
+.job:last-child { border-bottom: 1px solid var(--line); }
+.job .when { font-size: 14px; color: var(--muted); }
+.job h3 { font-size: 18px; }
+.job .co { color: var(--muted); font-size: 15px; }
+.job p.d { margin-top: 8px; color: var(--muted); font-size: 15px; max-width: 40em; }
 
-@media (max-width: 860px) {
-  .hero, .case.feature, .oss { grid-template-columns: 1fr; }
-  .numbers { grid-template-columns: repeat(2, 1fr); }
-  .numbers div:nth-child(3) { padding-left: 0; border-left: 0; }
-  .numbers div:nth-child(n+3) { border-top: 1px solid var(--line); }
-  .skills { grid-template-columns: repeat(2, 1fr); }
+/* contact */
+.contact { margin-top: 120px; padding: 56px; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.contact h2 { font-size: clamp(32px, 4vw, 44px); line-height: 1.1; }
+.contact .l { margin-top: 16px; color: var(--muted); font-size: 17px; max-width: 28em; }
+.direct { margin-top: 32px; display: grid; gap: 12px; }
+.direct a { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg); transition: border-color .15s, translate .15s; min-width: 0; }
+.direct a:hover { border-color: var(--line-strong); translate: 0 -2px; }
+.direct .ic { width: 44px; height: 44px; flex: none; display: grid; place-items: center; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); }
+.direct .ic svg { width: 22px; height: 22px; }
+.direct .ic .gh { color: var(--gh); }
+.direct span:not(.ic) { display: grid; min-width: 0; font-size: 15px; font-weight: 500; color: var(--ink); }
+.direct small { font-size: 12.5px; font-weight: 400; color: var(--faint); }
+.direct em { font-style: normal; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.direct .go { width: 18px; height: 18px; margin-left: auto; flex: none; fill: none; stroke: var(--faint); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: stroke .15s, translate .15s; }
+.direct a:hover .go { stroke: var(--accent); translate: 2px -2px; }
+.where { margin-top: 24px; display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14px; }
+.where svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+form { display: grid; gap: 18px; padding: 32px; border-radius: 20px; background: var(--raised); border: 1px solid var(--line); }
+label, legend { font-size: 14px; font-weight: 500; color: var(--ink); display: grid; gap: 8px; }
+fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 10px; }
+.chips { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.chips label { display: block; gap: 0; }
+.chips input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.chips span { display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 12px; white-space: nowrap; font-size: 13.5px !important; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); font-size: 14px; color: var(--muted); cursor: pointer; transition: all .15s; }
+.chips span svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.chips label:hover span { border-color: var(--line-strong); color: var(--ink); }
+.chips input:checked + span { background: var(--btn); border-color: var(--btn); color: var(--btn-ink); }
+.chips input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+input, textarea, select { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 15px var(--font); font-weight: 400; }
+input::placeholder, textarea::placeholder { color: var(--faint); }
+input:focus, textarea:focus, select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent); }
+textarea { min-height: 130px; resize: vertical; }
+.send { height: 52px !important; border-radius: 999px !important; font-size: 16px !important; width: 100%; }
+.send svg { width: 18px; height: 18px; }
+.fnote { text-align: center; font-size: 13px; color: var(--faint); margin-top: -6px; }
+footer { padding: 48px 0; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--faint); font-size: 14px; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.rv { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.rv.in { opacity: 1; transform: none; }
+
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; padding-top: 64px; }
+  .shots-hero { height: 440px; max-width: 520px; width: 100%; margin: 0 auto; }
+  .shots-hero img { width: 170px; }
+  .app { grid-template-columns: 1fr; padding: 28px; gap: 28px; }
+  .card.wide, .contact, .oss-story, .oss-code { grid-template-columns: 1fr; }
+  .oss-story { padding: 28px 28px 0; gap: 24px; }
+  .oss-code { padding: 28px; gap: 28px; }
+  .repo-bar { padding: 18px 28px; }
+  .more { grid-template-columns: 1fr 1fr; }
+  .facts, .oss-stats { grid-template-columns: 1fr 1fr; }
+  .facts div:nth-child(3), .oss-stats div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .oss-stats div:nth-child(3) { padding-left: 28px; }
+  .facts div:nth-child(n+3), .oss-stats div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .oss-stats div { padding: 20px 28px; }
+  table.cmp th:first-child, table.cmp td:first-child { padding-left: 28px; }
+  .process { grid-template-columns: 1fr 1fr; }
+  .links { display: none; }
+  #menu { display: inline-flex; }
+  nav.top.open { background: var(--bg); border-bottom-color: var(--line); }
+  nav.top.open .mnav { display: grid; position: absolute; left: 0; right: 0; top: 64px; padding: 4px 16px 20px; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 24px 40px -24px rgba(0,0,0,.25); }
+  .mnav a:not(.btn) { padding: 12px 4px; font-size: 17px; font-weight: 500; border-bottom: 1px solid var(--line); }
+  .mnav .btn { margin-top: 14px; height: 48px; border-radius: 999px; font-size: 15px; }
 }
 @media (max-width: 640px) {
-  .work, .edu, .skills { grid-template-columns: 1fr; }
-  .job, .ai { grid-template-columns: 1fr; gap: 8px; }
-  .top nav { display: none; }
-  .hero { padding-block: 24px 40px; }
-  section.block { padding-block: 56px 0; }
+  .services { grid-template-columns: 1fr; }
+  .wrap { padding: 0 16px; }
+  .shots-hero { height: 340px; }
+  .shots-hero img { width: 130px; border-radius: 16px; }
+  .gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -28px; padding: 0 28px; gap: 12px; }
+  .gallery img { flex: 0 0 62%; scroll-snap-align: center; }
+  .more, .process { grid-template-columns: 1fr; }
+  .svc { padding: 24px; }
+  .job { grid-template-columns: 1fr; gap: 4px; }
+  .contact { padding: 28px 16px; margin-top: 88px; }
+  .contact > div { padding: 0 4px; }
+  .facts strong { font-size: 26px; white-space: nowrap; }
+  .facts div + div { padding-left: 16px; }
+  .direct em { font-size: 14px; }
+  .direct a { padding: 12px; }
+  .row2, .chips { grid-template-columns: 1fr; }
+  form { padding: 20px 16px; background: transparent; border: 0; padding: 8px 4px 0; }
+  .card { padding: 24px; }
+  .oss-story { padding: 22px 22px 0; }
+  .oss-code { padding: 22px; }
+  .repo-bar { padding: 16px 22px; }
+  .oss-stats div, .oss-stats div:nth-child(3) { padding: 18px 22px; }
+  table.cmp th, table.cmp td { padding: 12px 10px 12px 0; font-size: 13px; }
+  table.cmp th:first-child, table.cmp td:first-child { padding-left: 22px; }
+  nav.top .nav-r .btn.primary { display: none; }
 }
-@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } .rv { opacity: 1; transform: none; } }
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-apple" viewBox="0 0 24 24"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.59 2.23 2.73 2.19 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.32-3.5zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.65-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M4.2 2.6c-.25.26-.4.67-.4 1.2v16.4c0 .53.15.94.4 1.2l.07.06 9.19-9.19v-.22L4.27 2.54l-.07.06zm12.32 12.73-3.06-3.07v-.22l3.06-3.07.07.04 3.63 2.06c1.04.59 1.04 1.55 0 2.14l-3.63 2.06-.07.06zm-.07.04L13.3 12.2l-9.1 9.1c.34.36.9.4 1.53.05l10.72-6.09m0-6.12L5.73 3.04c-.63-.36-1.19-.31-1.53.05l9.1 9.1 3.15-3.14z"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></symbol>
+  <symbol id="i-npm" viewBox="0 0 24 24"><path d="M2 7h20v9h-10v1.5H7.5V16H2V7zm1.5 1.5v6h3v-4.5H8v4.5h1.5v-6h-6zm7.5 0v7.5h3v-1.5h3v-6h-6zm3 1.5h1.5v3H14v-3zm4-1.5v6h1.5v-4.5H21v4.5h-1.5v-6H18z"/></symbol>
+</svg>
+
+<nav class="top" id="nav"><div class="wrap">
+  <a class="name" href="#">Hamza Jameel</a>
+  <div class="links"><a href="#work">Work</a><a href="#open-source">Open source</a><a href="#services">Services</a><a href="#experience">Experience</a></div>
+  <div class="nav-r">
+    <button class="btn icon-btn" id="theme" type="button" aria-label="Switch light or dark mode">
+      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a class="btn primary" href="#contact">Get in touch</a>
+    <button class="btn icon-btn" id="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav">
+      <svg class="m-open" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="m-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="mnav" id="mnav"><a href="#work">Work</a><a href="#open-source">Open source</a><a href="#services">Services</a><a href="#experience">Experience</a><a class="btn primary" href="#contact">Get in touch</a></div>
+</div></nav>
 
 <div class="wrap">
-  <header class="top">
-    <span class="status"><i></i>Open to React Native roles · Lahore / Remote</span>
-    <nav aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#oss">Open source</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="hero">
+    <div class="rv">
+      <span class="status"><i></i>Available for new projects · Lahore / Remote</span>
+      <h1>React Native engineer. <span>I build iOS and Android apps and get them into the stores.</span></h1>
+      <p class="lede">3.5+ years shipping mobile apps end to end, from architecture to release, with native Kotlin and Swift when the platform needs it.</p>
+      <div class="cta"><a class="btn primary" href="#contact">Start a project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="Hamza-Jameel-Resume.pdf" target="_blank" rel="noopener">View resume <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></a></div>
+      <div class="social">
+        <a href="https://github.com/HamzaJameel01" target="_blank" rel="noopener"><svg class="gh" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub</a>
+        <a href="https://linkedin.com/in/hamzajameel188" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.5H4.6V19h2.5V9.5ZM5.85 5.2a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9ZM19.4 13.6c0-2.6-.56-4.3-3.6-4.3-1.46 0-2.44.8-2.84 1.56h-.04V9.5H10.5V19h2.5v-4.7c0-1.24.24-2.44 1.78-2.44 1.52 0 1.54 1.42 1.54 2.52V19h2.5l.58-.01v-5.39Z"/></svg>LinkedIn</a>
+        <a href="mailto:hamzajameel188@gmail.com"><svg viewBox="52 42 88 66" aria-hidden="true"><path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6"/><path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15"/><path fill="#fbbc04" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2"/><path fill="#ea4335" d="M72 74V48l24 18 24-18v26L96 92"/><path fill="#c5221f" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2"/></svg>Email</a>
+        <small>React Native · Kotlin · Swift · TypeScript</small>
+      </div>
+    </div>
+    <div class="shots-hero rv" aria-hidden="true">
+      <img src="assets/fitworks-1.webp" alt="" width="600" height="1305">
+      <img src="assets/growzie-1.webp" alt="" width="600" height="1299">
+      <img src="assets/fam-3.webp" alt="" width="600" height="1299">
+    </div>
   </header>
 
-  <section class="hero">
-    <div>
-      <p class="label">React Native Engineer · 3.5+ years</p>
-      <h1 style="margin-top:14px">Hamza<br>Jameel</h1>
-      <p class="role">iOS &amp; Android apps, <span>with native Kotlin and Swift where the platform demands it.</span></p>
-      <p class="lede">I ship mobile apps end to end, from architecture to store release. Most recently I built three apps from scratch in 4.5 months, including a crash-detection app that reads motion sensors at 50Hz and texts an emergency contact with no internet.</p>
-      <div class="contact">
-        <a class="btn primary" href="https://linkedin.com/in/hamzajameel188" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://github.com/HamzaJameel01" target="_blank" rel="noopener">GitHub</a>
-        <button class="btn copy" type="button" id="copy-hero" data-email="hamzajameel188@gmail.com"><span class="email">hamzajameel188@gmail.com</span><span class="copy-label">Copy</span></button>
-      </div>
-    </div>
-
-    <figure class="sensor" style="margin:0" aria-label="Animated accelerometer trace showing a detected impact">
-      <div class="sensor-head">
-        <span class="label">Steel Angel · accelerometer · 50Hz</span>
-        <span class="legend"><span><b style="background:var(--accent)"></b>x</span><span><b style="background:var(--muted)"></b>y</span><span><b style="background:var(--ink)"></b>z</span></span>
-      </div>
-      <canvas id="trace" width="600" height="190"></canvas>
-      <div class="sensor-foot">
-        <span>3s sliding window</span>
-        <span id="state">monitoring…</span>
-      </div>
-    </figure>
-  </section>
-
-  <div class="numbers">
+  <div class="facts rv">
+    <div><strong>3.5+ yrs</strong><span>React Native experience</span></div>
+    <div><strong>4.5 months</strong><span>to build 3 apps from scratch</span></div>
     <div><strong>99.4%</strong><span>crash-free users on Iqleel</span></div>
-    <div><strong>2×</strong><span>faster app startup</span></div>
-    <div><strong>3 apps</strong><span>built from scratch in 4.5 months</span></div>
-    <div><strong>200+</strong><span>weekly npm downloads</span></div>
+    <div><strong>2× faster</strong><span>app startup delivered</span></div>
   </div>
 
-  <section class="block" id="work">
-    <div class="sec-head">
-      <h2>Selected work</h2>
-      <span class="label">2023 – 2026</span>
-    </div>
+  <section class="s" id="work">
+    <div class="head rv"><h2>Apps I've built</h2><p>Real products with real users. Screenshots are from the App Store, Google Play and the live product.</p></div>
 
-    <div class="work">
-      <article class="case feature">
-        <div>
-          <div class="case-top"><span class="label">Coding Pixel · 2026</span><span class="label">Safety · Android &amp; iOS</span></div>
-          <h3>Steel Angel</h3>
-          <p class="what">A crash-detection app for riders. It watches the phone's motion sensors, spots a real impact, and gets help even when there is no mobile data.</p>
-          <p class="result">Tuned over real rides until bumps and potholes <em>stopped triggering false alerts.</em></p>
-          <div class="chips">
-            <span class="chip">React Native</span><span class="chip">RxJS</span><span class="chip">Kotlin SmsManager</span><span class="chip">FCM</span><span class="chip">Foreground service</span>
-          </div>
-        </div>
-        <div>
-          <span class="label">What happens after a crash</span>
-          <ol class="flow">
-            <li><span class="t">50Hz</span><span>Accelerometer and gyroscope streams are fused with RxJS.</span></li>
-            <li><span class="t">3s</span><span>A sliding-window algorithm separates impacts, tip-overs and falls from road noise.</span></li>
-            <li><span class="t">prompt</span><span>An "Are you OK?" countdown gives the rider a chance to cancel.</span></li>
-            <li><span class="t">SMS ×3</span><span>A GPS-tagged SMS goes out through a native Kotlin module, retried up to 3 times. No internet needed.</span></li>
-            <li><span class="t">push</span><span>FCM alerts reach contacts when there is a connection. A foreground service keeps monitoring in the background.</span></li>
-          </ol>
-        </div>
-      </article>
-
-      <article class="case">
-        <div class="case-top"><span class="label">Viral Square · 2024 – 2026</span><span class="label">EdTech</span></div>
-        <h3>Iqleel</h3>
-        <p class="what">An adaptive early-learning app for Math and English (PreK to grade 3). I led React Native development as one of two RN developers.</p>
+    <article class="app rv">
+      <div>
+        <div class="app-id"><img src="assets/growzie-icon.png" alt="Growzie app icon" width="56" height="56"><div><h3>Growzie</h3><p class="kicker">Neighbourhood sharing · iOS · Swift</p></div></div>
+        <p class="desc">Neighbours share homegrown produce and chat about it. Built natively in Swift.</p>
         <ul>
-          <li>Built the core app: practice and quizzes, study plans, teacher analytics, payments.</li>
-          <li>Halved startup time by moving storage to MMKV and lazy-loading heavy modules.</li>
+          <li>Cut location-feed query cost about 4× by moving from geohashing to Firestore range queries with CoreLocation filtering.</li>
+          <li>Universal Links and Firebase Auth.</li>
+        </ul>
+        <p class="stack">Swift · Firestore · CoreLocation · Universal Links</p>
+        <div class="stores"><a class="store" href="https://apps.apple.com/us/app/growzie/id6759717208" target="_blank" rel="noopener"><svg><use href="#i-apple"/></svg>App Store</a></div>
+      </div>
+      <div class="gallery">
+        <img src="assets/growzie-1.webp" alt="Growzie home feed of shared produce" loading="lazy" width="600" height="1299">
+        <img src="assets/growzie-3.webp" alt="Growzie private chat between neighbours" loading="lazy" width="600" height="1299">
+        <img src="assets/growzie-5.webp" alt="Growzie posting a share with photos" loading="lazy" width="600" height="1299">
+      </div>
+    </article>
+
+    <article class="app rv">
+      <div>
+        <div class="app-id"><img src="assets/iqleel-icon.png" alt="Iqleel app icon" width="56" height="56"><div><h3>Iqleel</h3><p class="kicker">EdTech · PreK to grade 3 · 2024 – 2026</p></div></div>
+        <p class="desc">Adaptive Math and English practice for ages 4 to 9, with voice-over on every question. I led React Native development of the mobile app.</p>
+        <ul>
+          <li>Halved app startup time by moving storage to MMKV and lazy-loading heavy modules.</li>
           <li>60 fps Reanimated and Lottie animations synced to audio.</li>
-          <li>Stripe subscriptions with saved cards (PaymentSheet + SetupIntent).</li>
+          <li>Stripe subscriptions with saved cards. 99.4% of users crash-free.</li>
         </ul>
-        <div class="chips"><span class="chip">Reanimated</span><span class="chip">Lottie</span><span class="chip">MMKV</span><span class="chip">Stripe</span></div>
-      </article>
-
-      <article class="case">
-        <div class="case-top"><span class="label">Coding Pixel · 2026</span><span class="label">Native iOS</span></div>
-        <h3>Growize</h3>
-        <p class="what">A location-based social feed, written in Swift.</p>
-        <ul>
-          <li>Cut location-feed query cost about 4× by replacing geohashing with Firestore multi-field range queries (bounding box plus CoreLocation filtering).</li>
-          <li>Added Universal Links and Firebase Auth.</li>
-        </ul>
-        <div class="chips"><span class="chip">Swift</span><span class="chip">Firestore</span><span class="chip">CoreLocation</span><span class="chip">Universal Links</span></div>
-      </article>
-
-      <article class="case">
-        <div class="case-top"><span class="label">Coding Pixel · 2026</span><span class="label">Native Kotlin + Swift</span></div>
-        <h3>Cattle Worth</h3>
-        <p class="what">A livestock valuation app, live on both stores.</p>
-        <ul>
-          <li>Rebuilt the yearly subscription flow end to end on both platforms, with Google Play Billing on Android and StoreKit on iOS.</li>
-        </ul>
-        <div class="chips"><span class="chip">Play Billing</span><span class="chip">StoreKit</span><span class="chip">In-app subscriptions</span></div>
-        <div class="links">
-          <a href="https://play.google.com/store/apps/details?id=com.app.cattleworth" target="_blank" rel="noopener">Google Play ↗</a>
-          <a href="https://apps.apple.com/pk/app/cattle-worth/id6736498197" target="_blank" rel="noopener">App Store ↗</a>
+        <p class="stack">React Native · Reanimated · Lottie · MMKV · Stripe</p>
+        <div class="stores">
+          <a class="store" href="https://www.iqleel.com" target="_blank" rel="noopener">iqleel.com ↗</a>
+          <span class="store muted">Web shown · apps coming soon</span>
         </div>
-      </article>
+      </div>
+      <div class="gallery">
+        <img src="assets/iqleel-1.webp" alt="Iqleel home screen with PreK to grade 3 practice" loading="lazy" width="600" height="1299">
+        <img src="assets/iqleel-2.webp" alt="Iqleel counting question for preschoolers" loading="lazy" width="600" height="1299">
+        <img src="assets/iqleel-3.webp" alt="Iqleel skill page with the cheetah mascot" loading="lazy" width="600" height="1299">
+      </div>
+    </article>
 
-      <article class="case">
-        <div class="case-top"><span class="label">Coding Pixel · 2026</span><span class="label">Fitness · in progress</span></div>
-        <h3>Fitworks</h3>
-        <p class="what">A coaching app with three roles: Head Coach, Coach and Client.</p>
+    <article class="app rv">
+      <div>
+        <div class="app-id"><img src="assets/cattleworth-icon.png" alt="Cattle Worth app icon" width="56" height="56"><div><h3>Cattle Worth</h3><p class="kicker">Livestock valuation · iOS & Android</p></div></div>
+        <p class="desc">Snap a photo of a cow and get its estimated weight and market price.</p>
         <ul>
-          <li>Built on React Native 0.78 New Architecture, React 19 and TypeScript.</li>
-          <li>Role-gated navigation and MMKV session rehydration.</li>
-          <li>Real-time updates over a NestJS + Socket.IO backend.</li>
+          <li>Rebuilt the yearly subscription end to end on both platforms: Google Play Billing in Kotlin, StoreKit in Swift.</li>
         </ul>
-        <div class="chips"><span class="chip">New Architecture</span><span class="chip">TypeScript</span><span class="chip">Socket.IO</span><span class="chip">NestJS</span></div>
-      </article>
-
-      <article class="case">
-        <div class="case-top"><span class="label">ProjectZ · 2023 – 2024</span><span class="label">Sports · Maps</span></div>
-        <h3>Football Around Me</h3>
-        <p class="what">Find football games and venues nearby.</p>
-        <ul>
-          <li>Map clustering on a 100-marker screen removed pan-and-zoom lag.</li>
-          <li>Facebook login and sharing, plus 8 location-based REST endpoints.</li>
-        </ul>
-        <div class="chips"><span class="chip">Google Maps</span><span class="chip">Clustering</span><span class="chip">Redux Toolkit</span></div>
-        <div class="links">
-          <a href="https://play.google.com/store/apps/details?id=com.footballaroundme.fame" target="_blank" rel="noopener">Google Play ↗</a>
-          <a href="https://apps.apple.com/us/app/football-around-me/id1534363768" target="_blank" rel="noopener">App Store ↗</a>
+        <p class="stack">Kotlin · Swift · Play Billing · StoreKit</p>
+        <div class="stores">
+          <a class="store" href="https://apps.apple.com/pk/app/cattle-worth/id6736498197" target="_blank" rel="noopener"><svg><use href="#i-apple"/></svg>App Store</a>
+          <a class="store" href="https://play.google.com/store/apps/details?id=com.app.cattleworth" target="_blank" rel="noopener"><svg><use href="#i-play"/></svg>Google Play</a>
         </div>
-      </article>
+      </div>
+      <div class="gallery">
+        <img src="assets/cattleworth-3.webp" alt="Cattle Worth photo upload screen" loading="lazy" width="600" height="1298">
+        <img src="assets/cattleworth-4.webp" alt="Cattle Worth weight and price results" loading="lazy" width="600" height="1298">
+        <img src="assets/cattleworth-5.webp" alt="Cattle Worth result summary" loading="lazy" width="600" height="1298">
+      </div>
+    </article>
 
-      <article class="case">
-        <div class="case-top"><span class="label">ProjectZ · 2023 – 2024</span><span class="label">AIoT · Property</span></div>
-        <h3>HomeSifu</h3>
-        <p class="what">An AIoT property-management app for owners and tenants.</p>
+    <article class="app rv">
+      <div>
+        <div class="app-id"><img src="assets/homesifu-icon.png" alt="HomeSifu app icon" width="56" height="56"><div><h3>HomeSifu</h3><p class="kicker">AIoT property management · iOS & Android</p></div></div>
+        <p class="desc">Owners and tenants manage units, smart locks and electricity meters from one app.</p>
         <ul>
           <li>Shipped 6 features in the live app.</li>
           <li>Set up React Navigation structure and Redux Toolkit state for predictable data flow.</li>
         </ul>
-        <div class="chips"><span class="chip">React Navigation</span><span class="chip">Redux Toolkit</span><span class="chip">REST</span></div>
-        <div class="links">
-          <a href="https://play.google.com/store/apps/details?id=com.homesifu" target="_blank" rel="noopener">Google Play ↗</a>
-          <a href="https://apps.apple.com/my/app/homesifu/id6456606103" target="_blank" rel="noopener">App Store ↗</a>
+        <p class="stack">React Native · Redux Toolkit · React Navigation · REST</p>
+        <div class="stores">
+          <a class="store" href="https://apps.apple.com/my/app/homesifu/id6456606103" target="_blank" rel="noopener"><svg><use href="#i-apple"/></svg>App Store</a>
+          <a class="store" href="https://play.google.com/store/apps/details?id=com.homesifu" target="_blank" rel="noopener"><svg><use href="#i-play"/></svg>Google Play</a>
         </div>
+      </div>
+      <div class="gallery">
+        <img src="assets/homesifu-3.webp" alt="HomeSifu business dashboard" loading="lazy" width="600" height="1299">
+        <img src="assets/homesifu-4.webp" alt="HomeSifu smart lock control" loading="lazy" width="600" height="1299">
+        <img src="assets/homesifu-6.webp" alt="HomeSifu electricity usage chart" loading="lazy" width="600" height="1299">
+      </div>
+    </article>
+
+    <article class="app rv">
+      <div>
+        <div class="app-id"><img src="assets/fitworks-icon.png" alt="Fitworks app icon" width="56" height="56"><div><h3>Fitworks</h3><p class="kicker">Fitness coaching · iOS & Android · 2026</p></div></div>
+        <p class="desc">One app to run a gym: members book sessions, coaches plan workouts and meals, owners track earnings.</p>
+        <ul>
+          <li>Built from scratch on React Native 0.78 with the New Architecture.</li>
+          <li>Role-gated navigation for Head Coach, Coach and Client in one codebase.</li>
+          <li>Real-time schedules and chat over Socket.IO.</li>
+        </ul>
+        <p class="stack">React Native · TypeScript · NestJS · Socket.IO</p>
+        <div class="stores"><span class="store muted">In App Store and Play Store review</span></div>
+      </div>
+      <div class="gallery">
+        <img src="assets/fitworks-1.webp" alt="Fitworks session booking calendar" loading="lazy" width="600" height="1305">
+        <img src="assets/fitworks-2.webp" alt="Fitworks workout plan from a coach" loading="lazy" width="600" height="1305">
+        <img src="assets/fitworks-3.webp" alt="Fitworks body fat progress chart" loading="lazy" width="600" height="1305">
+      </div>
+    </article>
+
+    <article class="app rv">
+      <div>
+        <div class="app-id"><img src="assets/fam-icon.png" alt="Football Around Me app icon" width="56" height="56"><div><h3>Football Around Me</h3><p class="kicker">Sports · Maps · iOS & Android</p></div></div>
+        <p class="desc">Find football matches, stadiums, pubs and hotels near you, and plan a trip to the game.</p>
+        <ul>
+          <li>Map clustering on a 100-marker screen removed pan-and-zoom lag.</li>
+          <li>Facebook login and sharing, plus 8 location-based REST endpoints.</li>
+        </ul>
+        <p class="stack">React Native · Google Maps · Redux Toolkit · Facebook SDK</p>
+        <div class="stores"><span class="store muted">Retired from the stores in 2026</span></div>
+      </div>
+      <div class="gallery">
+        <img src="assets/fam-3.webp" alt="Football Around Me map of nearby matches" loading="lazy" width="600" height="1299">
+        <img src="assets/fam-4.webp" alt="Football Around Me match details" loading="lazy" width="600" height="1299">
+        <img src="assets/fam-5.webp" alt="Football Around Me pubs and hotels near the stadium" loading="lazy" width="600" height="1299">
+      </div>
+    </article>
+
+    <div class="head rv" style="margin:96px 0 0"><h2>More work</h2><p>Client work that isn't public yet.</p></div>
+    <div class="more">
+      <article class="card wide rv">
+        <div>
+          <p class="kicker">Safety · Android & iOS · 2026</p>
+          <h3>Steel Angel</h3>
+          <p>Crash detection for riders. It spots a real impact and gets help, even with no mobile data. Tuned over real rides until potholes stopped triggering false alerts.</p>
+          <p class="stack">React Native · RxJS · Kotlin · FCM · Foreground service</p>
+        </div>
+        <ol class="flow">
+          <li><span><b>50Hz</b> accelerometer and gyroscope streams fused with RxJS.</span></li>
+          <li><span>A <b>3-second</b> sliding window separates impacts from road noise.</span></li>
+          <li><span>An <b>"Are you OK?"</b> countdown lets the rider cancel.</span></li>
+          <li><span><b>GPS-tagged SMS</b> through a native Kotlin module, retried 3×. No internet needed.</span></li>
+        </ol>
       </article>
     </div>
   </section>
 
-  <section class="block" id="oss">
-    <div class="sec-head">
-      <h2>Open source</h2>
-      <span class="label">MIT license</span>
-    </div>
-    <div class="oss">
-      <div>
-        <h3>react-native-background-sms</h3>
-        <p>A React Native SMS library with native Kotlin (Android) and Swift (iOS) modules. It sends silently in the background, splits long messages, handles multiple recipients and tracks delivery. It runs in production as Steel Angel's emergency-alert engine.</p>
-        <div class="links" style="margin-top:16px">
-          <a href="https://www.npmjs.com/package/react-native-background-sms" target="_blank" rel="noopener">npm ↗</a>
-          <a href="https://github.com/HamzaJameel01/react-native-background-sms" target="_blank" rel="noopener">GitHub ↗</a>
-          <span class="label" style="align-self:center">200+ weekly downloads</span>
+  <section class="s" id="open-source">
+    <div class="head rv"><h2>Open source</h2><p>Built for a real production need, then published for the React Native community.</p></div>
+    <div class="oss rv">
+      <div class="repo-bar">
+        <a class="repo" href="https://github.com/HamzaJameel01/react-native-background-sms" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg><span>HamzaJameel01 /</span><b>react-native-background-sms</b></a>
+        <div class="stores" style="margin:0">
+          <a class="store" href="https://github.com/HamzaJameel01/react-native-background-sms" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5z"/></svg>Star on GitHub</a>
+          <a class="store" href="https://www.npmjs.com/package/react-native-background-sms" target="_blank" rel="noopener"><svg><use href="#i-npm"/></svg>npm</a>
         </div>
       </div>
-      <div class="code" role="img" aria-label="Install command for the package">
-<span class="c"># install</span>
-npm i <span class="s">react-native-background-sms</span>
 
-<span class="c"># Kotlin + Swift under the hood</span>
-<span class="k">silent send</span>      ✓
-<span class="k">multipart</span>        ✓
-<span class="k">multi-recipient</span>  ✓
-<span class="k">delivery status</span>  ✓</div>
-    </div>
-  </section>
-
-  <section class="block" id="experience">
-    <div class="sec-head">
-      <h2>Experience</h2>
-      <span class="label">3 years 9 months</span>
-    </div>
-    <div class="ledger">
-      <div class="job">
-        <div class="when">Jan 2026 – Present</div>
+      <div class="oss-story">
         <div>
-          <h3>React Native Developer</h3>
-          <p class="co">Coding Pixel · Lahore</p>
-          <ul>
-            <li>Built Steel Angel, Growize and Fitworks from scratch in 4.5 months, owning each from architecture to delivery.</li>
-            <li>Rebuilt Cattle Worth's yearly subscription in native Kotlin and Swift.</li>
-            <li>Set up CI/CD with GitHub Actions to build on every push.</li>
+          <p class="tag-l">The problem</p>
+          <p>Steel Angel has to text an emergency contact after a crash, when the rider may not be able to touch the phone. Every React Native SMS library I tried only opened the messages app and waited for someone to tap Send.</p>
+        </div>
+        <div>
+          <p class="tag-l">What I built</p>
+          <p>A native module that <b>sends SMS silently in the background on Android</b> through Kotlin's SmsManager, with multipart splitting and delivery tracking. On iOS, where Apple blocks silent sending, it opens a pre-filled Swift compose screen through the same API.</p>
+        </div>
+      </div>
+
+      <div class="oss-code">
+        <div>
+          <div class="install"><span id="cmd">npm install react-native-background-sms</span><button type="button" id="copy-cmd">Copy</button></div>
+          <ul class="feat">
+            <li><b>One typed API</b> for both platforms, with a clear result: sent, failed, cancelled or unavailable.</li>
+            <li><b>Long messages</b> split automatically into multipart SMS on Android.</li>
+            <li><b>Delivery tracking</b> through a BroadcastReceiver with a 30-second timeout.</li>
+            <li><b>Multiple recipients</b>, one SMS each, sent in order.</li>
           </ul>
         </div>
-      </div>
-      <div class="job">
-        <div class="when">Mar 2024 – Jan 2026</div>
-        <div>
-          <h3>Software Engineer</h3>
-          <p class="co">Viral Square · Lahore</p>
-          <span class="promo">Associate Software Engineer → promoted Mar 2025</span>
-          <ul>
-            <li>Led React Native development on Iqleel, an adaptive learning app for PreK to grade 3.</li>
-            <li>Halved startup time with MMKV and lazy loading.</li>
-            <li>Mentored 2 junior developers and led code reviews, keeping 99.4% of users crash-free.</li>
-          </ul>
+        <div class="tabs">
+          <div class="tab-bar" role="tablist">
+            <button type="button" role="tab" aria-selected="true" data-tab="t1">Send</button>
+            <button type="button" role="tab" aria-selected="false" data-tab="t2">Check support</button>
+            <button type="button" role="tab" aria-selected="false" data-tab="t3">Android setup</button>
+          </div>
+<pre class="code" id="t1"><span class="k">import</span> { sendSms } <span class="k">from</span> <span class="s">'react-native-background-sms'</span>;
+
+<span class="k">const</span> result = <span class="k">await</span> sendSms({
+  phoneNumbers: [<span class="s">'+923001234567'</span>],
+  message: <span class="s">'Crash detected near Lahore. Location: …'</span>,
+});
+
+<span class="k">if</span> (result.status === <span class="s">'sent'</span>) markAlertDelivered();</pre>
+<pre class="code" id="t2" hidden><span class="k">import</span> { canSendSms } <span class="k">from</span> <span class="s">'react-native-background-sms'</span>;
+
+<span class="k">const</span> { available, reason } = <span class="k">await</span> canSendSms();
+
+<span class="k">if</span> (!available) {
+  <span class="c">// e.g. no SIM card, or SMS not supported</span>
+  showFallback(reason);
+}</pre>
+<pre class="code" id="t3" hidden><span class="c">&lt;!-- android/app/src/main/AndroidManifest.xml --&gt;</span>
+&lt;uses-permission
+  android:name=<span class="s">"android.permission.SEND_SMS"</span> /&gt;
+
+<span class="c">// Ask at runtime before the first send</span>
+<span class="k">await</span> PermissionsAndroid.request(
+  PermissionsAndroid.PERMISSIONS.SEND_SMS,
+);</pre>
         </div>
       </div>
-      <div class="job">
-        <div class="when">Feb 2023 – Mar 2024</div>
-        <div>
-          <h3>Junior React Native Developer</h3>
-          <p class="co">ProjectZ · Lahore</p>
-          <ul>
-            <li>Shipped 6 features each on two live apps, Football Around Me and HomeSifu.</li>
-            <li>Removed map lag with marker clustering; integrated Facebook SDK and 8 location endpoints.</li>
-          </ul>
+
+      <table class="cmp">
+        <thead><tr><th>Behaviour</th><th>Android</th><th>iOS</th></tr></thead>
+        <tbody>
+          <tr><td>User has to tap anything</td><td class="yes">No, sends in the background</td><td>Taps Send on a pre-filled screen</td></tr>
+          <tr><td>Long messages</td><td class="yes">Auto-split (multipart)</td><td>Handled by iOS</td></tr>
+          <tr><td>Multiple recipients</td><td class="yes">One SMS each</td><td>One compose screen</td></tr>
+          <tr><td>Delivery result</td><td class="yes">BroadcastReceiver</td><td>Delegate callback</td></tr>
+        </tbody>
+      </table>
+
+      <div class="oss-stats">
+        <div><strong id="npm-dl">250+</strong><span>npm downloads</span></div>
+        <div><strong>v<span id="npm-v">1.0.0</span></strong><span>latest release</span></div>
+        <div><strong>MIT</strong><span>free to use</span></div>
+        <div><strong>Kotlin · Swift</strong><span>native on both platforms</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s" id="services">
+    <div class="head rv"><h2>How I can help your app</h2><p>Starting a new app or fixing one you already have. This is what clients hire me for.</p></div>
+    <div class="services rv">
+      <div class="svc" style="--c:#2563eb"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg></span><h3>New iOS and Android app</h3><p>From idea to live in both stores, on one React Native codebase in TypeScript that is easy to grow.</p><div class="proof"><b>Proof</b><span>Built 3 apps from scratch in 4.5 months.</span></div><div class="tags"><span>TypeScript</span><span>New Architecture</span><span>App design to release</span></div></div>
+      <div class="svc" style="--c:#16a34a"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20M6 15h4"/></svg></span><h3>Subscriptions and payments</h3><p>In-app purchases that charge, renew and restore correctly, so you get paid and users stay subscribed.</p><div class="proof"><b>Proof</b><span>Rebuilt Cattle Worth&#39;s yearly plan in Kotlin and Swift.</span></div><div class="tags"><span>Play Billing</span><span>StoreKit</span><span>Stripe</span></div></div>
+      <div class="svc" style="--c:#dc2626"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 2 1.9 1.9M16 2l-1.9 1.9M9 7.1v-1a3 3 0 0 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6Z"/><path d="M12 20v-9M6.5 9C4.6 8.8 3 7.1 3 5M6 13H2M3 21c0-2.1 1.7-3.9 3.8-4M21 5c0 2.1-1.6 3.8-3.5 4M22 13h-4M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg></span><h3>Bug fixes and crashes</h3><p>Crashes, broken builds and store rejections found and fixed in an app you already have.</p><div class="proof"><b>Proof</b><span>99.4% of Iqleel users crash-free.</span></div><div class="tags"><span>Crash reports</span><span>Build errors</span><span>Store review</span></div></div>
+      <div class="svc" style="--c:#d97706"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg></span><h3>Speed and performance</h3><p>Faster launch, smooth scrolling and animations, and lower memory so the app feels instant.</p><div class="proof"><b>Proof</b><span>2× faster startup on Iqleel.</span></div><div class="tags"><span>Startup time</span><span>60 fps</span><span>MMKV</span></div></div>
+      <div class="svc" style="--c:#7c3aed"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></svg></span><h3>Native features</h3><p>Kotlin and Swift modules for sensors, background work, SMS and anything JavaScript can&#39;t reach.</p><div class="proof"><b>Proof</b><span>Published a native SMS module on npm.</span></div><div class="tags"><span>Kotlin</span><span>Swift</span><span>Background tasks</span></div></div>
+      <div class="svc" style="--c:#0891b2"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1Z"/><path d="m12 15-3-3a22 22 0 0 1 2-4A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2Z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></svg></span><h3>Store release and updates</h3><p>App Store and Play Store setup, review fixes, and automatic builds so every update ships smoothly.</p><div class="proof"><b>Proof</b><span>CI/CD with GitHub Actions at Coding Pixel.</span></div><div class="tags"><span>App Store</span><span>Play Console</span><span>GitHub Actions</span></div></div>
+    </div>
+    <div class="svc-cta rv"><div><strong>Not sure what you need?</strong><p>Tell me what&#39;s wrong or what you want to build. I&#39;ll suggest the simplest way to get there.</p></div><a class="btn" href="#contact">Tell me about your app</a></div>
+  </section>
+
+  <section class="s" id="process">
+    <div class="head rv"><h2>How we'd work together</h2></div>
+    <div class="process rv">
+      <div class="step"><span class="n">01</span><h3>Discuss</h3><p>A short call about your users, goals and budget.</p></div>
+      <div class="step"><span class="n">02</span><h3>Plan</h3><p>Screens, scope and milestones agreed in writing.</p></div>
+      <div class="step"><span class="n">03</span><h3>Build</h3><p>Regular builds you can install on your own phone.</p></div>
+      <div class="step"><span class="n">04</span><h3>Ship</h3><p>Store submission, launch and fixes after release.</p></div>
+    </div>
+  </section>
+
+  <section class="s" id="experience">
+    <div class="head rv"><h2>Experience</h2><p>3 years 9 months across three teams.</p></div>
+    <div class="rv">
+      <div class="job"><div class="when">Jan 2026 – Present</div><div><h3>React Native Developer</h3><p class="co">Coding Pixel · Lahore</p><p class="d">Built Steel Angel, Growzie and Fitworks from scratch in 4.5 months. Rebuilt Cattle Worth subscriptions natively. CI/CD with GitHub Actions.</p></div></div>
+      <div class="job"><div class="when">Mar 2024 – Jan 2026</div><div><h3>Software Engineer</h3><p class="co">Viral Square · Lahore · promoted Mar 2025</p><p class="d">Led React Native on Iqleel, mentored 2 junior developers, kept 99.4% of users crash-free.</p></div></div>
+      <div class="job"><div class="when">Feb 2023 – Mar 2024</div><div><h3>Junior React Native Developer</h3><p class="co">ProjectZ · Lahore</p><p class="d">Shipped features on Football Around Me and HomeSifu.</p></div></div>
+      <div class="job"><div class="when">2018 – 2022</div><div><h3>B.S. Computer Science</h3><p class="co">Superior University, Lahore</p></div></div>
+    </div>
+  </section>
+
+  <section class="contact rv" id="contact">
+    <div>
+      <h2>Have an app in mind, or a role to fill?</h2>
+      <p class="l">I take on freelance projects and I'm open to full-time roles. Tell me what you're building and I'll get back to you with next steps.</p>
+      <div class="direct">
+        <a href="mailto:hamzajameel188@gmail.com"><span class="ic"><svg viewBox="52 42 88 66" aria-hidden="true"><path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6"/><path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15"/><path fill="#fbbc04" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2"/><path fill="#ea4335" d="M72 74V48l24 18 24-18v26L96 92"/><path fill="#c5221f" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2"/></svg></span><span><small>Email</small><em>hamzajameel188@gmail.com</em></span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a href="https://linkedin.com/in/hamzajameel188" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.5H4.6V19h2.5V9.5ZM5.85 5.2a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9ZM19.4 13.6c0-2.6-.56-4.3-3.6-4.3-1.46 0-2.44.8-2.84 1.56h-.04V9.5H10.5V19h2.5v-4.7c0-1.24.24-2.44 1.78-2.44 1.52 0 1.54 1.42 1.54 2.52V19h2.5l.58-.01v-5.39Z"/></svg></span><span><small>LinkedIn</small><em>in/hamzajameel188</em></span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a href="https://github.com/HamzaJameel01" target="_blank" rel="noopener"><span class="ic"><svg class="gh" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></span><span><small>GitHub</small><em>HamzaJameel01</em></span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+      <p class="where"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>Lahore, Pakistan · Open to remote worldwide</p>
+    </div>
+    <form id="f">
+      <fieldset>
+        <legend>I'm reaching out about</legend>
+        <div class="chips">
+          <label><input type="radio" name="type" value="A new app" checked><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg>A new app</span></label>
+          <label><input type="radio" name="type" value="Fix or speed up my app"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5Z"/></svg>Fix or speed up my app</span></label>
+          <label><input type="radio" name="type" value="A full-time role"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>A full-time role</span></label>
+          <label><input type="radio" name="type" value="Something else"><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></svg>Something else</span></label>
         </div>
+      </fieldset>
+      <div class="row2">
+        <label>Name<input name="name" required autocomplete="name" placeholder="Your name"></label>
+        <label>Email<input name="email" type="email" required autocomplete="email" placeholder="you@company.com"></label>
       </div>
-    </div>
+      <label>Message<textarea name="msg" required placeholder="What are you building? Platforms, timeline, budget…"></textarea></label>
+      <button class="btn primary send" type="submit">Send message <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></svg></button>
+      <p class="fnote">Opens your email app with the message ready to send.</p>
+    </form>
   </section>
 
-  <section class="block" id="skills">
-    <div class="sec-head"><h2>Skills</h2></div>
-    <div class="skills">
-      <div><h3>Languages</h3><p>JavaScript, TypeScript, Kotlin, Swift</p></div>
-      <div><h3>Mobile</h3><p>React Native, Expo, native module bridging, React Navigation, Reanimated, Gesture Handler, Lottie, FCM / Notifee, Google Maps, CoreLocation, Universal Links</p></div>
-      <div><h3>State &amp; data</h3><p>Redux Toolkit, React Query, Context API, RxJS, MMKV, AsyncStorage</p></div>
-      <div><h3>Backend &amp; cloud</h3><p>Firebase (Auth, Firestore, Storage, Messaging), Node.js, Express, NestJS, REST, Socket.IO</p></div>
-      <div><h3>Payments</h3><p>Stripe (PaymentSheet, SetupIntent), Google Play Billing, StoreKit</p></div>
-      <div><h3>Quality &amp; release</h3><p>Jest, React Native Testing Library, GitHub Actions, Xcode, Android Studio, App Store Connect, Play Console</p></div>
-    </div>
-    <div class="ai">
-      <span class="label">AI-assisted development</span>
-      <div>
-        <p>I use Cursor, Claude Code and ChatGPT daily for scaffolding, refactoring, debugging, tests and docs. I review and verify all AI-generated code before it merges.</p>
-        <p>I keep usage cost-efficient: clear or compact context between tasks, and use lighter models for routine work and stronger ones for hard problems.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="education">
-    <div class="sec-head"><h2>Education</h2></div>
-    <div class="edu">
-      <div>
-        <span class="label">2018 – 2022</span>
-        <h3 style="margin-top:6px">B.S. Computer Science</h3>
-        <p>Superior University, Lahore</p>
-      </div>
-      <div>
-        <span class="label">Oct 2022 – Jan 2023</span>
-        <h3 style="margin-top:6px">MERN Stack Bootcamp</h3>
-        <p>PSEB / PASHA at Contour Software. Built a full-stack exercise tracker with 6 REST endpoints.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer id="contact">
-    <h2>Hiring a React Native engineer? Let's talk.</h2>
-    <div class="contact">
-      <button class="btn primary copy" type="button" id="copy-footer" data-email="hamzajameel188@gmail.com"><span class="email">hamzajameel188@gmail.com</span><span class="copy-label">Copy</span></button>
-      <a class="btn" href="https://linkedin.com/in/hamzajameel188" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="https://github.com/HamzaJameel01" target="_blank" rel="noopener">GitHub</a>
-    </div>
-    <small>Lahore, Pakistan · English (fluent), Urdu (native)</small>
-  </footer>
+  <footer><span>© <span id="y"></span> Hamza Jameel</span><span>Lahore, Pakistan · English, Urdu</span></footer>
 </div>
 
 <script>
-// Copy email
-document.querySelectorAll('.copy').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    var label = btn.querySelector('.copy-label');
-    var email = btn.dataset.email;
-    function done(t) { label.textContent = t; setTimeout(function () { label.textContent = 'Copy'; }, 1600); }
-    try {
-      navigator.clipboard.writeText(email).then(function () { done('Copied'); }, function () { selectIt(); });
-    } catch (e) { selectIt(); }
-    function selectIt() {
-      var r = document.createRange(); r.selectNodeContents(btn.querySelector('.email'));
-      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done('Press ⌘C');
-    }
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// Sticky nav border
+var nav = document.getElementById('nav');
+addEventListener('scroll', function () { nav.classList.toggle('scrolled', scrollY > 8); }, { passive: true });
+
+// Reveal on scroll
+var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: .1 });
+document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+// Mobile menu
+var menu = document.getElementById('menu');
+function setMenu(open) { nav.classList.toggle('open', open); menu.setAttribute('aria-expanded', open); menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); }
+menu.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+document.querySelectorAll('.mnav a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+
+// Theme toggle: system by default, remembered once chosen
+var root = document.documentElement;
+document.getElementById('theme').addEventListener('click', function () {
+  var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme = dark ? 'light' : 'dark';
+  try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+});
+
+// Code tabs
+document.querySelectorAll('.tab-bar button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    document.querySelectorAll('.tab-bar button').forEach(function (x) { x.setAttribute('aria-selected', x === b); document.getElementById(x.dataset.tab).hidden = x !== b; });
   });
 });
 
-// Sensor trace: synthetic 3-axis signal with road noise and a periodic impact.
+// Copy install command
+document.getElementById('copy-cmd').addEventListener('click', function () {
+  var b = this;
+  try { navigator.clipboard.writeText(document.getElementById('cmd').textContent).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); }); } catch (e) {}
+});
+
+// Live npm numbers (falls back to the static text if the request fails)
 (function () {
-  var canvas = document.getElementById('trace');
-  var state = document.getElementById('state');
-  var ctx = canvas.getContext('2d');
-  var HZ = 50, WINDOW = 6 * HZ, CYCLE = 9 * HZ;
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var t = reduce ? 5 * HZ + 40 : 0;
-
-  function css(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
-  function noise(i, s) { return Math.sin(i * 0.37 + s) * 0.18 + Math.sin(i * 1.13 + s * 2) * 0.1 + Math.sin(i * 0.071 + s) * 0.12; }
-  function sample(i) {
-    var k = i % CYCLE, impactAt = 5 * HZ, d = k - impactAt;
-    var spike = d >= 0 && d < 40 ? Math.exp(-d / 9) * Math.sin(d * 0.9) : 0;
-    var pothole = (k > 2 * HZ && k < 2 * HZ + 8) ? Math.sin((k - 2 * HZ) * 0.8) * 0.5 : 0;
-    var tilt = d >= 20 ? Math.min(1, (d - 20) / 40) : 0;
-    return [
-      noise(i, 0) + spike * 3.2 + pothole,
-      noise(i, 2) + spike * 2.4 - tilt * 0.6,
-      1 + noise(i, 4) * 0.6 - spike * 2.6 + pothole * 0.6 - tilt * 0.9
-    ];
-  }
-  function resize() {
-    var r = canvas.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
-    canvas.width = Math.round(r.width * dpr); canvas.height = Math.round(r.height * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-  function draw() {
-    var w = canvas.clientWidth, h = canvas.clientHeight, mid = h / 2, scale = h / 9;
-    ctx.clearRect(0, 0, w, h);
-    ctx.strokeStyle = css('--line'); ctx.lineWidth = 1;
-    for (var g = -3; g <= 3; g++) { ctx.beginPath(); ctx.moveTo(0, mid - g * scale); ctx.lineTo(w, mid - g * scale); ctx.stroke(); }
-
-    var start = t - WINDOW, k = t % CYCLE, impactAt = 5 * HZ;
-    var detected = k >= impactAt + 6 && k < impactAt + 3 * HZ;
-    var impactIndex = t - (k - impactAt);
-    if (k >= impactAt) {
-      var x0 = ((impactIndex - start) / WINDOW) * w, x1 = x0 + (3 * HZ / WINDOW) * w;
-      ctx.fillStyle = css('--signal'); ctx.globalAlpha = 0.1;
-      ctx.fillRect(Math.max(0, x0), 0, Math.min(w, x1) - Math.max(0, x0), h);
-      ctx.globalAlpha = 1;
-    }
-    var colors = [css('--accent'), css('--muted'), css('--ink')];
-    for (var a = 0; a < 3; a++) {
-      ctx.beginPath(); ctx.strokeStyle = colors[a]; ctx.lineWidth = a === 2 ? 1.6 : 1.3;
-      for (var i = 0; i <= WINDOW; i++) {
-        var v = sample(start + i)[a], x = (i / WINDOW) * w, y = mid - v * scale;
-        i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
-      }
-      ctx.stroke();
-    }
-    ctx.fillStyle = css('--muted'); ctx.font = '11px ' + css('--mono');
-    ctx.fillText('+3g', 4, mid - 3 * scale - 4); ctx.fillText('−3g', 4, mid + 3 * scale + 12);
-    state.textContent = detected ? 'impact detected → "Are you OK?"' : 'monitoring…';
-    state.className = detected ? 'alert' : '';
-  }
-  function loop() { t += 1; draw(); requestAnimationFrame(loop); }
-  resize(); draw();
-  window.addEventListener('resize', function () { resize(); draw(); });
-  if (!reduce) requestAnimationFrame(loop);
+  var today = new Date().toISOString().slice(0, 10);
+  fetch('https://api.npmjs.org/downloads/point/2026-04-01:' + today + '/react-native-background-sms')
+    .then(function (r) { return r.json(); })
+    .then(function (d) { if (d.downloads > 0) document.getElementById('npm-dl').textContent = d.downloads.toLocaleString(); })
+    .catch(function () {});
+  fetch('https://registry.npmjs.org/react-native-background-sms/latest')
+    .then(function (r) { return r.json(); })
+    .then(function (d) { if (d.version) document.getElementById('npm-v').textContent = d.version; })
+    .catch(function () {});
 })();
-</script>
 
+// Contact form opens the visitor's email app
+document.getElementById('f').addEventListener('submit', function (e) {
+  e.preventDefault(); var d = new FormData(e.target);
+  location.href = 'mailto:hamzajameel188@gmail.com?subject=' + encodeURIComponent(d.get('type') + ' — ' + d.get('name')) + '&body=' + encodeURIComponent(d.get('msg') + '\n\n' + d.get('name') + ' (' + d.get('email') + ')');
+});
+</script>
 </body>
 </html>
